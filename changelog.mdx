@@ -1,0 +1,102 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Yaalago's features and functionality.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+  Yaalago releases updates regularly to enhance your travel agency workflow. Check this page for new features, improvements, and bug fixes.
+</Callout>
+
+Yaalago evolves quickly to better serve travel agencies. You receive notifications in-app and via email for major releases. Each version includes enhancements to client management, booking automation, commission tracking, and more.
+
+<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added automated proposal generation with branded templates for faster client conversions.
+- Introduced GDS PNR parsing for Amadeus and Sabre, converting raw codes to readable booking details.
+
+## Improvements
+
+- Enhanced commission tracking dashboard with real-time filters for suppliers and agents.
+- Optimized client profile merging to handle duplicate records more accurately.
+
+## Bug Fixes
+
+- Fixed task automation reminders not triggering for recurring follow-ups.
+- Resolved payment integration issues with Stripe for multi-currency proposals.
+
+</Update>
+
+<Update label="2024-09-25" description="v1.2.1" tags={["bugfix", "improvement"]}>
+
+## Improvements
+
+- Upgraded centralized dashboard with customizable widgets for bookings and finances.
+- Improved search in client management to include tags and document attachments.
+
+## Bug Fixes
+
+- Corrected export errors in commission reports when filtering by date range.
+- Fixed mobile responsiveness issues in proposal previews.
+
+</Update>
+
+<Update label="2024-09-10" description="v1.2.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched task automation workflows for automated follow-ups on booking inquiries.
+- Integrated commission tracking with major payment providers for automatic reconciliation.
+
+## Breaking Changes
+
+- Updated API endpoints for client profiles; migrate to new `{clientId}` path format.
+
+## Bug Fixes
+
+- Patched security vulnerability in document upload for client profiles.
+
+</Update>
+
+## Stay Updated
+
+Follow these steps to ensure you always have the latest version.
+
+<Steps>
+  <Step title="Enable Notifications" icon="bell">
+    In your Yaalago dashboard, navigate to **Settings > Notifications** and enable release alerts.
+  </Step>
+  <Step title="Check Release Notes" icon="book-open">
+    Visit the changelog regularly or subscribe to updates via RSS.
+  </Step>
+  <Step title="Upgrade Automatically" icon="download">
+    Yaalago auto-updates for cloud users. Self-hosted users run `yaalago upgrade`.
+  </Step>
+</Steps>
+
+<Expandable title="View Full Version History" default-open="false">
+  For older releases, check the [GitHub releases page](https://github.com/yaalago/yaalago/releases).
+  
+  | Version | Date       | Key Changes                  |
+  |---------|------------|------------------------------|
+  | v1.1.0 | 2024-08-15 | Initial client management   |
+  | v1.0.0 | 2024-07-20 | Core dashboard launch       |
+</Expandable>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get started with Yaalago's core features.
+  </Card>
+  <Card title="Feedback" icon="message-circle" href="/feedback" horizontal>
+    Share your thoughts on recent updates.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Found a bug? Report it via the in-app feedback form to help us improve.
+</Callout>

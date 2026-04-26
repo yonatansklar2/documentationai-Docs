@@ -1,0 +1,173 @@
+---
+title: Getting Started with Yaalago
+description: Set up your Yaalago account and complete your first actions to manage travel bookings efficiently.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+<Callout kind="info">
+- A valid email address for account creation
+- Access to your travel agency's details (name, address, branding)
+- Optional: Your GDS credentials if integrating PNR parsing
+</Callout>
+
+<Callout kind="tip">
+No credit card required for the free trial. Upgrade anytime from the dashboard.
+</Callout>
+
+## Create and Access Your Account
+
+Follow these steps to sign up and log in to Yaalago.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit [https://yaalago.com](https://yaalago.com) and click **Sign Up**.
+
+    Fill in your email, agency name, and create a strong password.
+
+    Verify your email via the confirmation link sent to your inbox.
+  </Step>
+
+  <Step title="Log In" icon="log-in">
+    Go to [https://app.yaalago.com/login](https://app.yaalago.com/login).
+
+    Enter your credentials or use Google SSO if enabled.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Browser" icon="globe">
+    Use Chrome, Firefox, or Safari for the best experience.
+  </Tab>
+
+  <Tab title="Mobile App" icon="smartphone">
+    Download the Yaalago app from the App Store or Google Play for on-the-go access.
+  </Tab>
+</Tabs>
+
+## Configure Your Dashboard
+
+Customize your centralized dashboard for bookings, tasks, and finances.
+
+<Steps>
+  <Step title="Complete Profile" icon="settings">
+    Navigate to **Settings {arrow-right} Agency Profile**.
+
+    Add your agency logo, address, and time zone.
+  </Step>
+
+  <Step title="Set Up Integrations" icon="plug">
+    In **Integrations**, connect your GDS (Amadeus, Sabre) or payment provider.
+
+    Copy your API key from the provider dashboard and paste it here.
+  </Step>
+
+  <Step title="Customize Views" icon="layout">
+    Go to **Dashboard {arrow-right} Customize**.
+
+    Drag widgets for commissions, upcoming bookings, and client tasks.
+  </Step>
+</Steps>
+
+## Add Your First Client Profile
+
+Client profiles store contacts, documents, tags, and booking history.
+
+<Steps>
+  <Step title="Create Profile" icon="user">
+    Click **Clients {arrow-right} New Client**.
+
+    Enter name, email, phone, and travel preferences.
+  </Step>
+
+  <Step title="Add Details" icon="file-text">
+    Upload passport/docs and apply tags like `VIP` or `Family`.
+
+    Merge duplicates if needed via the search bar.
+  </Step>
+
+  <Step title="Save and Tag" icon="save">
+    Hit **Save**. The profile appears in your dashboard client list.
+  </Step>
+</Steps>
+
+<ParamField path="clients" param-type="object" required="true">
+  Base endpoint for client management: `{https://api.yaalago.com/v1/clients}`.
+</ParamField>
+
+<ParamField body="name" param-type="string" required="true">
+  Client full name.
+</ParamField>
+
+<ParamField body="email" param-type="string" required="false">
+  Contact email for automated follow-ups.
+</ParamField>
+
+## Verify Setup with API (Optional)
+
+Test your setup by fetching your first client via API.
+
+<CodeGroup tabs="JavaScript,Python,cURL">
+  ```javascript
+  const response = await fetch('https://api.yaalago.com/v1/clients', {
+    headers: {
+      'Authorization': 'Bearer YOUR_API_KEY',
+      'Content-Type': 'application/json'
+    }
+  });
+  const clients = await response.json();
+  console.log(clients);
+  ```
+
+  ```python
+  import requests
+
+  headers = {
+      'Authorization': 'Bearer YOUR_API_KEY',
+      'Content-Type': 'application/json'
+  }
+  response = requests.get('https://api.yaalago.com/v1/clients', headers=headers)
+  clients = response.json()
+  print(clients)
+  ```
+
+  ```bash
+  curl -H "Authorization: Bearer YOUR_API_KEY" \
+       -H "Content-Type: application/json" \
+       https://api.yaalago.com/v1/clients
+  ```
+</CodeGroup>
+
+## Next Steps
+
+Explore more features to streamline your agency.
+
+<Columns cols={2}>
+  <Card title="Manage Bookings" icon="calendar" href="/docs/bookings">
+    Automate PNR parsing and track statuses in real-time.
+  </Card>
+
+  <Card title="Track Commissions" icon="dollar-sign" href="/docs/commissions">
+    Automate tracking across all suppliers and bookings.
+  </Card>
+
+  <Card title="Create Proposals" icon="file-text" href="/docs/proposals">
+    Generate branded proposals with integrated payments.
+  </Card>
+
+  <Card title="Automate Tasks" icon="zap" href="/docs/workflows" horizontal>
+    Set up follow-ups and reminders for better client service.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+  - **Login fails?** Check spam for verification email.
+  - **API errors?** Ensure `YOUR_API_KEY` is correct (find in **Settings {arrow-right} API**).
+  - **Dashboard slow?** Clear browser cache or contact support.
+</Expandable>
+
+<Callout kind="success">
+  Congratulations! Your Yaalago setup is complete. Start managing clients and bookings today.
+</Callout>
