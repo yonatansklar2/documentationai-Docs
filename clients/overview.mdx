@@ -1,0 +1,39 @@
+---
+title: Client Database
+description: A centralized client database with travel history, passports, loyalty programs, and automatic record creation and merging.
+---
+
+Yaalago keeps every client in one centralized database - and it largely builds itself as you work.
+
+## What a client profile holds
+
+- Contact details and travel history
+- Passports (with expiry tracking) and TSA Pre-Check
+- Frequent flyer numbers and loyalty programs
+- Meal and seat preferences
+- Tags, groups, and relationships to other travelers
+
+## Automatic client creation and merge
+
+Whenever a trip enters Yaalago - via **Sabre Sync**, a **manual Sabre or Amadeus PNR paste**, or a **proposal built from any source** - Yaalago automatically creates a client record from the parsed traveler details. If those details match an existing client, the records are **automatically merged** (name + date of birth / email / phone matching). No duplicates, no manual entry.
+
+<Callout kind="info">
+  This automatic merge runs on every incoming trip. It is separate from the manual [Duplicate Client Merge](/clients/merge) tool, which you use to review and clean up existing duplicates side by side.
+</Callout>
+
+## Explore client tools
+
+<Columns cols={2}>
+  <Card title="Passport OCR & AI Upload" icon="scan-line" href="/clients/passport-ocr">
+    Snap a passport photo and let AI fill the profile.
+  </Card>
+  <Card title="Tags, Groups & Relationships" icon="tags" href="/clients/tags-relationships">
+    Segment clients and link travelers who fly together.
+  </Card>
+  <Card title="Import & Export (CSV)" icon="upload" href="/clients/import-export">
+    Bulk import clients with preferences, FFNs, and passports.
+  </Card>
+  <Card title="Merging Duplicate Clients" icon="git-merge" href="/clients/merge">
+    Combine duplicate records in one click.
+  </Card>
+</Columns>

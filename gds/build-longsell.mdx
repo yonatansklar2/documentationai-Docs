@@ -1,0 +1,46 @@
+---
+title: Build Longsell
+description: The universal GDS code generator - turn client records, a Sabre or Amadeus PNR, or a pasted online flight option into a longsell code in your chosen GDS.
+---
+
+**Build Longsell** is Yaalago's headline GDS tool. It takes almost any input and outputs a **longsell code** in your choice of Sabre or Amadeus, copied to your clipboard. It consolidates what used to be five separate features into one.
+
+## What you can feed it
+
+| Input | Output |
+|---|---|
+| A stored client record (single or multiple) | Sabre or Amadeus longsell code |
+| A **Sabre PNR** | Longsell code in Sabre - or **cross-GDS** into Amadeus |
+| An **Amadeus PNR** | Longsell code in Amadeus - or cross-GDS into Sabre |
+| A Sabre PNR for a different **PCC** | Sabre longsell recreated in that PCC |
+| The **pasted text of an online flight option** | Sabre or Amadeus longsell code + a branded client proposal |
+| A stored client profile | 3DOCS, passenger codes, and booking entries from passports, TSA Pre-Check, and loyalty data |
+
+<Callout kind="warning">
+  For online flight options (Kayak, Google Flights, Skyscanner, or any search site), copy the **text contents** of the option - airline, flight numbers, times, layover, price - and paste that in. This is not a URL and not a screenshot; it is the actual text the agent sees on the page.
+</Callout>
+
+## How it works
+
+<Steps>
+  <Step title="Open Build Longsell" icon="code">
+    Choose **Build Longsell** from the GDS tools.
+  </Step>
+  <Step title="Provide your input" icon="clipboard">
+    Select a client record, or paste a PNR or the text of an online flight option.
+  </Step>
+  <Step title="Choose your GDS" icon="plane">
+    Pick Sabre or Amadeus. For cross-GDS, choose the target GDS that differs from the source.
+  </Step>
+  <Step title="Copy the longsell" icon="copy">
+    The longsell code is generated and copied to your clipboard, ready to paste into your GDS.
+  </Step>
+</Steps>
+
+## NN / GK toggle
+
+A per-segment **NN/GK toggle** controls how segments are sent to the GDS during longsell, giving you control over segment status on entry.
+
+<Callout kind="tip">
+  Working with families? Set up [Relationships](/clients/tags-relationships) so that when you longsell one traveler, Yaalago asks whether to include the linked passengers.
+</Callout>
