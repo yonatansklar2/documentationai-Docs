@@ -1,102 +1,42 @@
 ---
-title: Changelog
-description: Track the latest updates and improvements to Yaalago's features and functionality.
+title: Release History
+description: Recent Yaalago features and improvements.
 ---
 
-## Recent Updates
+A summary of notable Yaalago releases. For the full, live list and what's coming next, see the [public roadmap](https://roadmap.yaalago.com).
 
-<Callout kind="info">
-  Yaalago releases updates regularly to enhance your travel agency workflow. Check this page for new features, improvements, and bug fixes.
-</Callout>
+<Update label="2026" description="Points & award bookings">
+  ## Points Vault & award ledger
 
-Yaalago evolves quickly to better serve travel agencies. You receive notifications in-app and via email for major releases. Each version includes enhancements to client management, booking automation, commission tracking, and more.
-
-<Update label="2024-10-15" description="v1.3.0" tags={["feature", "improvement"]}>
-
-## New Features
-
-- Added automated proposal generation with branded templates for faster client conversions.
-- Introduced GDS PNR parsing for Amadeus and Sabre, converting raw codes to readable booking details.
-
-## Improvements
-
-- Enhanced commission tracking dashboard with real-time filters for suppliers and agents.
-- Optimized client profile merging to handle duplicate records more accurately.
-
-## Bug Fixes
-
-- Fixed task automation reminders not triggering for recurring follow-ups.
-- Resolved payment integration issues with Stripe for multi-currency proposals.
-
+  The [Points Vault](/points/overview) module lets you store loyalty accounts, credentials, and cards, and track cost and profit per account with a full [ledger and barter math](/points/ledger). Free on every plan.
 </Update>
 
-<Update label="2024-09-25" description="v1.2.1" tags={["bugfix", "improvement"]}>
+<Update label="2026" description="GDS tools">
+  ## Display Flights & Sabre Sync
 
-## Improvements
-
-- Upgraded centralized dashboard with customizable widgets for bookings and finances.
-- Improved search in client management to include tags and document attachments.
-
-## Bug Fixes
-
-- Corrected export errors in commission reports when filtering by date range.
-- Fixed mobile responsiveness issues in proposal previews.
-
+  - **[Display Flights](/gds/display-flights)** - generate screenshot-ready, branded visual flight options from a PNR or a pasted online option.
+  - **[Sabre Sync](/gds/sabre-sync)** - automatically pull bookings from your Master PCCs, kept in sync in real time (free during beta).
+  - **[Yaalago Porter](/gds/porter)** - the browser extension is now available on both Chrome and Firefox.
 </Update>
 
-<Update label="2024-09-10" description="v1.2.0" tags={["feature", "breaking"]}>
+<Update label="2026" description="Trips & monitoring">
+  ## Change monitoring on every flight
 
-## New Features
-
-- Launched task automation workflows for automated follow-ups on booking inquiries.
-- Integrated commission tracking with major payment providers for automatic reconciliation.
-
-## Breaking Changes
-
-- Updated API endpoints for client profiles; migrate to new `{clientId}` path format.
-
-## Bug Fixes
-
-- Patched security vulnerability in document upload for client profiles.
-
+  - Any flight entered into Yaalago - via AI booking or manual entry, not only GDS Sync - is now [monitored for schedule changes and cancellations](/trips/merge-monitoring).
+  - Merged trips show both agency (PNR) and airline confirmation codes per passenger, everywhere.
+  - Trip timeline ordering places hotels, car pickups, and flights in the correct order.
 </Update>
 
-## Stay Updated
+<Update label="2026" description="AI & proposals">
+  ## AI flight option conversion & multi-PDF import
 
-Follow these steps to ensure you always have the latest version.
+  - Paste the text of an online flight option (Google Flights, Kayak, Skyscanner) to get a branded proposal plus a GDS longsell code.
+  - Upload multiple PDFs at once for AI import, with vendor selection per booking type.
+  - Per-trip toggle to hide fare class on confirmation emails.
+</Update>
 
-<Steps>
-  <Step title="Enable Notifications" icon="bell">
-    In your Yaalago dashboard, navigate to **Settings > Notifications** and enable release alerts.
-  </Step>
-  <Step title="Check Release Notes" icon="book-open">
-    Visit the changelog regularly or subscribe to updates via RSS.
-  </Step>
-  <Step title="Upgrade Automatically" icon="download">
-    Yaalago auto-updates for cloud users. Self-hosted users run `yaalago upgrade`.
-  </Step>
-</Steps>
+<Update label="2026" description="Invoicing">
+  ## Edit fully paid invoices
 
-<Expandable title="View Full Version History" default-open="false">
-  For older releases, check the [GitHub releases page](https://github.com/yaalago/yaalago/releases).
-  
-  | Version | Date       | Key Changes                  |
-  |---------|------------|------------------------------|
-  | v1.1.0 | 2024-08-15 | Initial client management   |
-  | v1.0.0 | 2024-07-20 | Core dashboard launch       |
-</Expandable>
-
-## Next Steps
-
-<Columns cols={2}>
-  <Card title="Quickstart" icon="rocket" href="/quickstart">
-    Get started with Yaalago's core features.
-  </Card>
-  <Card title="Feedback" icon="message-circle" href="/feedback" horizontal>
-    Share your thoughts on recent updates.
-  </Card>
-</Columns>
-
-<Callout kind="tip">
-  Found a bug? Report it via the in-app feedback form to help us improve.
-</Callout>
+  Edit invoices even after full payment - Yaalago auto-recalculates totals and syncs the associated trips and records. See [Invoices](/financials/invoices).
+</Update>
