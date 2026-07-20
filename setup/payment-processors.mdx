@@ -1,0 +1,35 @@
+---
+title: Payment Processors
+description: Connect Stripe and USAePay to collect card payments through Yaalago checkout pages and invoices.
+---
+
+Yaalago collects client payments through your own payment processor. Two are supported: **Stripe** and **USAePay**. Connecting one enables checkout pages on proposals and payment links on invoices.
+
+## Connect Stripe
+
+<Steps>
+  <Step title="Open payment settings" icon="credit-card">
+    Go to **Settings > Payment Methods**.
+  </Step>
+  <Step title="Add your Stripe key" icon="key">
+    Paste your Stripe API secret key. Stripe supports card payments and Apple Pay, with automated reminders and fee accounting.
+  </Step>
+  <Step title="Set a default" icon="check">
+    If you connect more than one processor, choose which is used by default.
+  </Step>
+</Steps>
+
+## Connect USAePay
+
+<Steps>
+  <Step title="Open payment settings" icon="credit-card">
+    Go to **Settings > Payment Methods**.
+  </Step>
+  <Step title="Add USAePay credentials" icon="key">
+    Enter your USAePay credentials as an alternative US payment processor.
+  </Step>
+</Steps>
+
+<Callout kind="info">
+  Payments collected through Stripe or USAePay flow into [Payments](/financials/payments) and can be associated with trips and invoices automatically.
+</Callout>

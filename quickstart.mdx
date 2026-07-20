@@ -1,173 +1,77 @@
 ---
-title: Getting Started with Yaalago
-description: Set up your Yaalago account and complete your first actions to manage travel bookings efficiently.
+title: Quickstart
+description: Create your Yaalago account, set up your agency, and import your first trip in about 15 minutes.
 ---
 
-## Prerequisites
+This guide takes you from a brand-new account to your first imported trip. No credit card is required - the Free plan has no time limit.
 
-Before starting, ensure you have:
-
-<Callout kind="info">
-- A valid email address for account creation
-- Access to your travel agency's details (name, address, branding)
-- Optional: Your GDS credentials if integrating PNR parsing
-</Callout>
-
-<Callout kind="tip">
-No credit card required for the free trial. Upgrade anytime from the dashboard.
-</Callout>
-
-## Create and Access Your Account
-
-Follow these steps to sign up and log in to Yaalago.
+## 1. Create your account
 
 <Steps>
-  <Step title="Sign Up" icon="user-plus">
-    Visit [https://yaalago.com](https://yaalago.com) and click **Sign Up**.
-
-    Fill in your email, agency name, and create a strong password.
-
-    Verify your email via the confirmation link sent to your inbox.
+  <Step title="Sign up" icon="user-plus">
+    Go to [yaalago.com](https://yaalago.com) and click **Get Started**. Enter your email, agency name, and a password, then verify your email.
   </Step>
-
-  <Step title="Log In" icon="log-in">
-    Go to [https://app.yaalago.com/login](https://app.yaalago.com/login).
-
-    Enter your credentials or use Google SSO if enabled.
+  <Step title="Log in" icon="log-in">
+    Sign in at [crm.yaalago.com/dashboard](https://crm.yaalago.com/dashboard). Yaalago runs in your browser - Chrome, Firefox, Edge, or Safari - and is fully mobile-responsive.
   </Step>
 </Steps>
 
-<Tabs>
-  <Tab title="Browser" icon="globe">
-    Use Chrome, Firefox, or Safari for the best experience.
-  </Tab>
+## 2. Set up your agency
 
-  <Tab title="Mobile App" icon="smartphone">
-    Download the Yaalago app from the App Store or Google Play for on-the-go access.
+<Steps>
+  <Step title="Agency profile" icon="building">
+    Add your agency name, logo, and contact details so proposals, invoices, and confirmations are branded. See [Set Up Your Agency](/setup/agency).
+  </Step>
+  <Step title="Choose your GDS" icon="plane">
+    Set your default GDS - Sabre, Amadeus, or both. See [Users & Roles](/setup/users-roles) and the [GDS overview](/gds/overview).
+  </Step>
+  <Step title="Add vendors" icon="briefcase">
+    Add the vendors you work with and their commission structures so reporting is accurate from day one. See [Vendors & Commission Structures](/setup/vendors-commissions).
+  </Step>
+</Steps>
+
+## 3. Import your first trip
+
+<Tabs>
+  <Tab title="From Sabre" icon="plane">
+    In Sabre, display the full PNR, copy it, then in Yaalago click **Add Trip** and paste. Yaalago parses passengers, segments, and fares automatically. See [Importing Trips](/trips/overview).
+  </Tab>
+  <Tab title="From Amadeus" icon="plane">
+    Copy the Amadeus PNR and paste it into **Add Trip**. See [Importing Trips](/trips/overview).
+  </Tab>
+  <Tab title="From a PDF / email" icon="file-text">
+    Drop any confirmation PDF or email from any provider and let AI extract the details. See [Universal Confirmation Import](/proposals/confirmation-import).
   </Tab>
 </Tabs>
 
-## Configure Your Dashboard
+<Callout kind="tip">
+  When a trip is imported, Yaalago automatically creates a client record from the traveler details - and merges it if the client already exists. Your client database builds itself.
+</Callout>
 
-Customize your centralized dashboard for bookings, tasks, and finances.
+## 4. Send a proposal or invoice
 
 <Steps>
-  <Step title="Complete Profile" icon="settings">
-    Navigate to **Settings {arrow-right} Agency Profile**.
-
-    Add your agency logo, address, and time zone.
+  <Step title="Build a proposal" icon="file-plus">
+    Turn the trip into a branded proposal with pricing and options, then share a public checkout link. See [Proposal Builder](/proposals/overview).
   </Step>
-
-  <Step title="Set Up Integrations" icon="plug">
-    In **Integrations**, connect your GDS (Amadeus, Sabre) or payment provider.
-
-    Copy your API key from the provider dashboard and paste it here.
-  </Step>
-
-  <Step title="Customize Views" icon="layout">
-    Go to **Dashboard {arrow-right} Customize**.
-
-    Drag widgets for commissions, upcoming bookings, and client tasks.
+  <Step title="Invoice and collect" icon="receipt">
+    Generate an invoice from the trip and collect payment via Stripe or USAePay. See [Invoices](/financials/invoices).
   </Step>
 </Steps>
 
-## Add Your First Client Profile
-
-Client profiles store contacts, documents, tags, and booking history.
-
-<Steps>
-  <Step title="Create Profile" icon="user">
-    Click **Clients {arrow-right} New Client**.
-
-    Enter name, email, phone, and travel preferences.
-  </Step>
-
-  <Step title="Add Details" icon="file-text">
-    Upload passport/docs and apply tags like `VIP` or `Family`.
-
-    Merge duplicates if needed via the search bar.
-  </Step>
-
-  <Step title="Save and Tag" icon="save">
-    Hit **Save**. The profile appears in your dashboard client list.
-  </Step>
-</Steps>
-
-<ParamField path="clients" param-type="object" required="true">
-  Base endpoint for client management: `{https://api.yaalago.com/v1/clients}`.
-</ParamField>
-
-<ParamField body="name" param-type="string" required="true">
-  Client full name.
-</ParamField>
-
-<ParamField body="email" param-type="string" required="false">
-  Contact email for automated follow-ups.
-</ParamField>
-
-## Verify Setup with API (Optional)
-
-Test your setup by fetching your first client via API.
-
-<CodeGroup tabs="JavaScript,Python,cURL">
-  ```javascript
-  const response = await fetch('https://api.yaalago.com/v1/clients', {
-    headers: {
-      'Authorization': 'Bearer YOUR_API_KEY',
-      'Content-Type': 'application/json'
-    }
-  });
-  const clients = await response.json();
-  console.log(clients);
-  ```
-
-  ```python
-  import requests
-
-  headers = {
-      'Authorization': 'Bearer YOUR_API_KEY',
-      'Content-Type': 'application/json'
-  }
-  response = requests.get('https://api.yaalago.com/v1/clients', headers=headers)
-  clients = response.json()
-  print(clients)
-  ```
-
-  ```bash
-  curl -H "Authorization: Bearer YOUR_API_KEY" \
-       -H "Content-Type: application/json" \
-       https://api.yaalago.com/v1/clients
-  ```
-</CodeGroup>
-
-## Next Steps
-
-Explore more features to streamline your agency.
+## Next steps
 
 <Columns cols={2}>
-  <Card title="Manage Bookings" icon="calendar" href="/docs/bookings">
-    Automate PNR parsing and track statuses in real-time.
+  <Card title="GDS Tools" icon="plane" href="/gds/overview">
+    Prep Travelers, Build Longsell, and Display Flights.
   </Card>
-
-  <Card title="Track Commissions" icon="dollar-sign" href="/docs/commissions">
-    Automate tracking across all suppliers and bookings.
+  <Card title="Points & Award Bookings" icon="gem" href="/points/overview">
+    Track loyalty balances and profit with the Points Vault.
   </Card>
-
-  <Card title="Create Proposals" icon="file-text" href="/docs/proposals">
-    Generate branded proposals with integrated payments.
+  <Card title="Yaalago Porter" icon="chrome" href="/gds/porter">
+    The browser extension for one-click GDS capture.
   </Card>
-
-  <Card title="Automate Tasks" icon="zap" href="/docs/workflows" horizontal>
-    Set up follow-ups and reminders for better client service.
+  <Card title="Help Center" icon="help-circle" href="/help-center">
+    FAQs and troubleshooting.
   </Card>
 </Columns>
-
-<Expandable title="Troubleshooting Common Issues" default-open="false">
-  - **Login fails?** Check spam for verification email.
-  - **API errors?** Ensure `YOUR_API_KEY` is correct (find in **Settings {arrow-right} API**).
-  - **Dashboard slow?** Clear browser cache or contact support.
-</Expandable>
-
-<Callout kind="success">
-  Congratulations! Your Yaalago setup is complete. Start managing clients and bookings today.
-</Callout>

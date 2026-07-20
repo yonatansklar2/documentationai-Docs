@@ -1,12 +1,8 @@
 {
   "name": "Yaalago",
   "colors": {
-    "light": {
-      "brand": "#414e9f"
-    },
-    "dark": {
-      "brand": "#828CC9"
-    }
+    "light": { "brand": "#414e9f" },
+    "dark": { "brand": "#828CC9" }
   },
   "navigation": {
     "tabs": [
@@ -18,43 +14,95 @@
             "group": "Getting Started",
             "icon": "rocket",
             "pages": [
-              {
-                "title": "Introduction",
-                "path": "introduction",
-                "icon": "home"
-              },
-              {
-                "title": "Quickstart",
-                "path": "quickstart",
-                "icon": "zap"
-              }
+              { "title": "Introduction", "path": "introduction", "icon": "home" },
+              { "title": "Quickstart", "path": "quickstart", "icon": "zap" },
+              { "title": "Plans & Pricing", "path": "pricing", "icon": "tag" }
             ]
           },
           {
-            "group": "Core Concepts",
+            "group": "Setup & Configuration",
+            "icon": "settings",
+            "pages": [
+              { "title": "Set Up Your Agency", "path": "setup/agency", "icon": "building" },
+              { "title": "Users & Roles", "path": "setup/users-roles", "icon": "users" },
+              { "title": "Vendors & Commission Structures", "path": "setup/vendors-commissions", "icon": "briefcase" },
+              { "title": "Payment Processors", "path": "setup/payment-processors", "icon": "credit-card" },
+              { "title": "Email & Text Templates", "path": "setup/templates", "icon": "mail" },
+              { "title": "Terms & Conditions", "path": "setup/terms-conditions", "icon": "file-check" },
+              { "title": "Transaction Modes & Excluded Emails", "path": "setup/transaction-modes", "icon": "sliders" }
+            ]
+          },
+          {
+            "group": "GDS Tools (Sabre & Amadeus)",
+            "icon": "plane",
+            "pages": [
+              { "title": "Overview", "path": "gds/overview", "icon": "compass" },
+              { "title": "Prep Travelers", "path": "gds/prep-travelers", "icon": "user-check" },
+              { "title": "Build Longsell", "path": "gds/build-longsell", "icon": "code" },
+              { "title": "Display Flights", "path": "gds/display-flights", "icon": "image" },
+              { "title": "Yaalago Porter (Browser Extension)", "path": "gds/porter", "icon": "chrome" },
+              { "title": "Sabre Sync", "path": "gds/sabre-sync", "icon": "refresh-cw" }
+            ]
+          },
+          {
+            "group": "Clients",
+            "icon": "users",
+            "pages": [
+              { "title": "Client Database", "path": "clients/overview", "icon": "contact" },
+              { "title": "Passport OCR & AI Upload", "path": "clients/passport-ocr", "icon": "scan-line" },
+              { "title": "Tags, Groups & Relationships", "path": "clients/tags-relationships", "icon": "tags" },
+              { "title": "Import & Export (CSV)", "path": "clients/import-export", "icon": "upload" },
+              { "title": "Merging Duplicate Clients", "path": "clients/merge", "icon": "git-merge" }
+            ]
+          },
+          {
+            "group": "Proposals",
+            "icon": "file-text",
+            "pages": [
+              { "title": "Proposal Builder", "path": "proposals/overview", "icon": "file-plus" },
+              { "title": "Service Options", "path": "proposals/service-options", "icon": "list-plus" },
+              { "title": "Checkout Pages", "path": "proposals/checkout", "icon": "shopping-cart" },
+              { "title": "Universal Confirmation Import", "path": "proposals/confirmation-import", "icon": "file-input" }
+            ]
+          },
+          {
+            "group": "Trips",
+            "icon": "map",
+            "pages": [
+              { "title": "Importing Trips", "path": "trips/overview", "icon": "download" },
+              { "title": "Merge & Change Monitoring", "path": "trips/merge-monitoring", "icon": "bell" },
+              { "title": "Pre-Journey Reminders", "path": "trips/reminders", "icon": "clock" },
+              { "title": "Exchanges, Voids & Cancellations", "path": "trips/exchanges-voids", "icon": "repeat" }
+            ]
+          },
+          {
+            "group": "Points & Award Bookings",
+            "icon": "gem",
+            "pages": [
+              { "title": "Points Vault Overview", "path": "points/overview", "icon": "vault" },
+              { "title": "Ledger & Barter Math", "path": "points/ledger", "icon": "calculator" },
+              { "title": "Booking with Points", "path": "points/bookings", "icon": "ticket" }
+            ]
+          },
+          {
+            "group": "Invoicing & Financials",
+            "icon": "dollar-sign",
+            "pages": [
+              { "title": "Invoices", "path": "financials/invoices", "icon": "receipt" },
+              { "title": "Payments", "path": "financials/payments", "icon": "banknote" },
+              { "title": "Commission Tracking", "path": "financials/commissions", "icon": "percent" },
+              { "title": "Reports & Multi-Currency", "path": "financials/reports", "icon": "bar-chart-3" }
+            ]
+          },
+          {
+            "group": "More",
             "icon": "layers",
             "pages": [
-              {
-                "title": "Features",
-                "path": "features",
-                "icon": "file-text"
-              },
-              {
-                "title": "Integrations",
-                "path": "integrations",
-                "icon": "plug"
-              }
+              { "title": "Tasks & Reminders", "path": "tasks", "icon": "check-square" },
+              { "title": "Dashboard & Analytics", "path": "dashboard", "icon": "layout-dashboard" },
+              { "title": "AI Features", "path": "ai-features", "icon": "sparkles" },
+              { "title": "Integrations", "path": "integrations", "icon": "plug" }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Endpoints",
-            "openapi": "api-reference/openapi.yaml"
           }
         ]
       },
@@ -62,20 +110,13 @@
         "tab": "Help Center",
         "icon": "help-circle",
         "pages": [
-          {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
+          { "title": "Help Center", "path": "help-center", "icon": "home" },
           {
             "group": "FAQs",
             "icon": "help-circle",
             "expandable": false,
             "pages": [
-              {
-                "title": "Getting Started FAQ",
-                "path": "help-center/faq/getting-started"
-              }
+              { "title": "Getting Started FAQ", "path": "help-center/faq/getting-started" }
             ]
           },
           {
@@ -83,21 +124,7 @@
             "icon": "alert-triangle",
             "expandable": false,
             "pages": [
-              {
-                "title": "Login Issues",
-                "path": "help-center/troubleshooting/login-issues"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Create Project",
-                "path": "help-center/guides/create-project"
-              }
+              { "title": "Login Issues", "path": "help-center/troubleshooting/login-issues" }
             ]
           }
         ]
@@ -106,11 +133,7 @@
         "tab": "Changelog",
         "icon": "clock",
         "pages": [
-          {
-            "title": "Release History",
-            "path": "changelog",
-            "icon": "history"
-          }
+          { "title": "Release History", "path": "changelog", "icon": "history" }
         ]
       }
     ]
