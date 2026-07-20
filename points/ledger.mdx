@@ -1,0 +1,43 @@
+---
+title: Ledger & Barter Math
+description: How the Points Vault ledger tracks points in, points used, and remaining balance - and how barter revenue is recorded against a trip.
+---
+
+The Points Vault keeps a **structured ledger** for every account, and applies clear barter math when points are used on a booking.
+
+## The ledger
+
+For each account, the ledger tracks:
+
+- **Points in** - how many points you have
+- **Purchased** - how much was bought from the seller, and what you paid
+- **Used** - how the points were spent
+- **Remaining balance** - what is left
+
+The balance **decrements automatically** as points are spent on trips.
+
+<Callout kind="info">
+  Example: you buy 100,000 points and use 25,000 on a booking. The ledger shows 75,000 remaining, and continues to decrement as you book (100k -> 75k -> 25k).
+</Callout>
+
+## Barter math on a booking
+
+When a points booking enters as a trip, you apply the points used against it. Yaalago already knows your cost/owned rate, and you choose a **barter rate** for what you accept the points as.
+
+### Worked example
+
+<Steps>
+  <Step title="Apply points to the trip" icon="ticket">
+    Use 50,000 points and apply **$500 off** the purchase plus **$200 tax**.
+  </Step>
+  <Step title="Revenue is recorded" icon="dollar-sign">
+    The $500 + $200 you accepted as barter is recorded as **revenue**.
+  </Step>
+  <Step title="Profit lands automatically" icon="trending-up">
+    If a customer owes $2,750 and you take $3,000 of points (300,000 @ $0.01), the remainder lands as **profit** - and the account's ledger decrements by the points used.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  This is what lets a points-first agency see true margin per booking, exactly like a cash trip.
+</Callout>

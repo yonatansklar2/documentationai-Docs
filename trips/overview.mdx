@@ -1,0 +1,48 @@
+---
+title: Importing Trips
+description: Bring trips into Yaalago from Sabre, Amadeus, a manual entry, or an AI confirmation import.
+---
+
+A **trip** is the central record in Yaalago - it holds the itinerary, passengers, pricing, payments, and tasks. There are several ways to create one.
+
+## Ways to import
+
+<Tabs>
+  <Tab title="Sabre" icon="plane">
+    Display the full PNR in Sabre (using your PF key), copy it, then in Yaalago click **Add Trip** and paste. Yaalago extracts passengers, segments, and fares. The [Yaalago Porter](/gds/porter) extension can capture the PNR for you in one click.
+  </Tab>
+  <Tab title="Amadeus" icon="plane">
+    Copy the Amadeus PNR and paste it into **Add Trip**. Multi-segment itineraries and commission tracking are supported.
+  </Tab>
+  <Tab title="Manual" icon="edit">
+    Add any trip manually - useful for award trips, third-party bookings, or anything not in a GDS. You can mark a manual segment as **open** for reporting.
+  </Tab>
+  <Tab title="AI import" icon="sparkles">
+    Drop a confirmation PDF or email from any provider and let AI build the trip. See [Universal Confirmation Import](/proposals/confirmation-import).
+  </Tab>
+</Tabs>
+
+## Award & third-party bookings
+
+Yaalago handles award trips and third-party bookings, including subagency bookings with split fees. When a subagency booking is submitted, three emails are auto-generated: a ticket confirmation, an agent commission note, and a trip confirmation.
+
+## Per-trip details
+
+- **Seats, meals, and baggage** per passenger per segment
+- **Trip allowances** for seating and baggage
+- **Payments** recorded on the Edit Trip page and associated automatically
+
+<Callout kind="tip">
+  Every imported trip automatically creates or merges the [client record](/clients/overview) from the traveler details.
+</Callout>
+
+## Next
+
+<Columns cols={2}>
+  <Card title="Merge & Change Monitoring" icon="bell" href="/trips/merge-monitoring">
+    Combine bookings and get alerts on schedule changes.
+  </Card>
+  <Card title="Exchanges, Voids & Cancellations" icon="repeat" href="/trips/exchanges-voids">
+    Handle changes to issued trips.
+  </Card>
+</Columns>

@@ -1,0 +1,40 @@
+---
+title: Exchanges, Voids & Cancellations
+description: Replace trips with updated GDS data, void trips while keeping the fee, exchange trips and split PNRs, and cancel trips or segments.
+---
+
+Trips change. Yaalago has dedicated flows for the common post-booking scenarios.
+
+## Trip replacement
+
+Replace a trip with updated GDS data when the itinerary is reissued, keeping the record and its history intact.
+
+## Voided trips
+
+Void a trip while **keeping the fee** - useful when a ticket is voided within the void window but your service fee still applies.
+
+## Exchanges
+
+<Columns cols={2}>
+  <Card title="Full exchange" icon="repeat">
+    Fully exchange a trip in the CRM and confirm the new itinerary details.
+  </Card>
+  <Card title="Split PNR exchange" icon="split">
+    Execute an exchange to manage a PNR split.
+  </Card>
+</Columns>
+
+## Cancellations
+
+<Steps>
+  <Step title="Cancel a trip" icon="x-circle">
+    Cancel the whole trip in the CRM.
+  </Step>
+  <Step title="Cancel a segment and set an alert" icon="bell">
+    Cancel an outbound segment and set an alert for the return.
+  </Step>
+</Steps>
+
+<Callout kind="info">
+  When you update a trip's price, you can sync the updated price with its associated invoices so your financials stay accurate. See [Invoices](/financials/invoices).
+</Callout>
