@@ -3,44 +3,35 @@ title: Build Longsell
 description: The universal GDS code generator - turn client records, a Sabre or Amadeus PNR, or a pasted online flight option into a longsell code in your chosen GDS.
 ---
 
-**Build Longsell** is Yaalago's headline GDS tool. It takes almost any input and outputs a **longsell code** in your choice of Sabre or Amadeus, copied to your clipboard. It consolidates what used to be five separate features into one.
+**Build Longsell** is Yaalago's headline GDS tool. It takes almost any input - a stored client record, a Sabre or Amadeus PNR, a PNR from a different PCC, or the pasted text of an online flight option - and outputs a **longsell code** in your choice of Sabre or Amadeus, copied to your clipboard. Cross-GDS conversion (Sabre PNR to Amadeus longsell, or vice versa) works in one step, and a per-segment **NN/GK toggle** controls how segments are sent to the GDS.
 
-## What you can feed it
+One common flow - moving an itinerary between PCCs - is shown below.
 
-| Input | Output |
-|---|---|
-| A stored client record (single or multiple) | Sabre or Amadeus longsell code |
-| A **Sabre PNR** | Longsell code in Sabre - or **cross-GDS** into Amadeus |
-| An **Amadeus PNR** | Longsell code in Amadeus - or cross-GDS into Sabre |
-| A Sabre PNR for a different **PCC** | Sabre longsell recreated in that PCC |
-| The **pasted text of an online flight option** | Sabre or Amadeus longsell code + a branded client proposal |
-| A stored client profile | 3DOCS, passenger codes, and booking entries from passports, TSA Pre-Check, and loyalty data |
+<iframe
+  src="https://play.gumlet.io/embed/6a5ebd99e4e7b5ab4684fd1f"
+  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
+  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  title="Video tutorial"
+></iframe>
 
-<Callout kind="warning">
-  For online flight options (Kayak, Google Flights, Skyscanner, or any search site), copy the **text contents** of the option - airline, flight numbers, times, layover, price - and paste that in. This is not a URL and not a screenshot; it is the actual text the agent sees on the page.
-</Callout>
-
-## How it works
+## Move an itinerary between PCCs
 
 <Steps>
-  <Step title="Open Build Longsell" icon="code">
-    Choose **Build Longsell** from the GDS tools.
-  </Step>
-  <Step title="Provide your input" icon="clipboard">
-    Select a client record, or paste a PNR or the text of an online flight option.
-  </Step>
-  <Step title="Choose your GDS" icon="plane">
-    Pick Sabre or Amadeus. For cross-GDS, choose the target GDS that differs from the source.
-  </Step>
-  <Step title="Copy the longsell" icon="copy">
-    The longsell code is generated and copied to your clipboard, ready to paste into your GDS.
+  <Step title="Paste the PNR">
+    Paste in the **PNR** and convert to longsell. The output is formatted so you can paste it into a different PCC, or into Amadeus, and you can change any relevant formats.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_5RJgFM37Jd.gif" alt="Paste PNR and convert" />
+    </Frame>
+
+    No need to recreate the booking - just use Build Longsell and the job is done.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_MugIDSH_dP.gif" alt="Longsell output" />
+    </Frame>
   </Step>
 </Steps>
 
-## NN / GK toggle
-
-A per-segment **NN/GK toggle** controls how segments are sent to the GDS during longsell, giving you control over segment status on entry.
-
 <Callout kind="tip">
-  Working with families? Set up [Relationships](/clients/tags-relationships) so that when you longsell one traveler, Yaalago asks whether to include the linked passengers.
+  Working with families? Set up [Relationships](/clients/tags-relationships) so Yaalago prompts you to include linked passengers at longsell time.
 </Callout>

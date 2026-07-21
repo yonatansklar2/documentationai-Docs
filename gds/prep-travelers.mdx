@@ -3,31 +3,44 @@ title: Prep Travelers
 description: Paste a list of travelers and instantly get correctly formatted passenger codes in Sabre or Amadeus, with automatic age-status detection.
 ---
 
-**Prep Travelers** (formerly Convert PAX) turns a plain list of travelers into correctly formatted passenger codes for your GDS - no manual typing of name formats.
+**Prep Travelers** (formerly Convert PAX) turns a plain list of travelers into correctly formatted passenger codes for your GDS - no manual typing of name formats. It also detects age status automatically (lap infants, children, adults), handles compound surnames with the `=` separator, and can pull details straight from stored client profiles.
 
-## How it works
+<iframe
+  src="https://play.gumlet.io/embed/6a5ebd95e4e7b5ab4684fccc"
+  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
+  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  title="Video tutorial"
+></iframe>
 
 <Steps>
-  <Step title="Open Prep Travelers" icon="user-check">
-    From the GDS tools, choose **Prep Travelers**.
+  <Step title="Access Prep Travelers">
+    In the shortcuts menu, navigate to the **Prep Travelers** section and add your clients.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_aK1YKLprgC.jpeg" alt="Prep Travelers" />
+    </Frame>
   </Step>
-  <Step title="Paste your travelers" icon="clipboard">
-    Paste the list of names (or pull them from stored client records).
+  <Step title="Adjust Client Details">
+    For each client, specify their gender (male or female) and passenger type (adult or child).
+
+    **View Available Formats** - below the client details, you'll see all the available formats that can be used for the conversion, including frequent flyer formats and email.
   </Step>
-  <Step title="Choose Sabre or Amadeus" icon="plane">
-    Pick your output format. Amadeus output supports configurable name order and date format.
+  <Step title="Upload Passport Image">
+    If needed, upload the client's passport image in the designated field.
+
+    **Automatic Passport Expiry Reminder** - once a passport is uploaded, the system offers an email reminder six months before the passport expires, so you never miss a renewal.
   </Step>
-  <Step title="Copy the codes" icon="copy">
-    Yaalago outputs the passenger codes, ready to paste into your GDS.
+  <Step title="Adjust Settings and Convert">
+    Adjust any remaining settings according to your preference, then click **Convert and Copy**.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_U3XQPwwlDz.jpeg" alt="Convert and copy" />
+    </Frame>
+
+    The information is automatically copied to your clipboard, ready to paste into Sabre or Amadeus. You can also save the converted client to your **CRM** or attach it to an existing **trip**.
   </Step>
 </Steps>
 
-## What it handles automatically
-
-- **Age-status detection** - lap infants, children, and adults are identified automatically.
-- **Multiple last names** - compound surnames are handled using the `=` separator.
-- **Bassinets and special cases** - common passenger scenarios are supported.
-
 <Callout kind="tip">
-  Passenger details can also be pulled from stored [client profiles](/clients/overview), including passports and loyalty numbers, so you rarely retype anything.
+  Uploading a passport here also offers a 6-month-ahead expiry reminder on save. See [Passport OCR & AI Upload](/clients/passport-ocr).
 </Callout>

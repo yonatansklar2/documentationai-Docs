@@ -1,30 +1,41 @@
 ---
 title: Payments
-description: Record and associate payments, route payments across agencies and vendors, and keep a full audit trail of money movement.
+description: Record and associate payments to trips, route payments across agencies and vendors, and keep a full audit trail.
 ---
 
-Yaalago records every payment and ties it to the right trip and invoice, giving you a complete financial picture per booking.
+Yaalago records every payment and ties it to the right trip and invoice. Card payments via Stripe or USAePay flow in automatically, and manual or offline payments can be entered too. The walkthrough below covers associating payments to a trip.
 
-## Record a payment
+<iframe
+  src="https://play.gumlet.io/embed/6a5ebdb5e4e7b5ab4684ff6d"
+  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
+  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  title="Video tutorial"
+></iframe>
 
 <Steps>
-  <Step title="Open the trip" icon="map">
-    Go to the Edit Trip page.
+  <Step title="Add a Payment Transaction">
+    Scroll down to **Payment History** and click **Add Transaction**.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_20fce6d0-e4de-46b9-b2c9-acc7f6b300d0.gif" alt="Add transaction" />
+    </Frame>
   </Step>
-  <Step title="Add the payment" icon="banknote">
-    Record the payment - card payments via Stripe/USAePay flow in automatically, and manual/offline payments can be entered too.
+  <Step title="Associate or Add Payment">
+    Associate a payment from an existing proposal, or add a manual payment using credit transaction modes and credit card payments.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_d4519f40-cf21-4a3c-93e1-3a56ee35febf.gif" alt="Associate payment" />
+    </Frame>
   </Step>
-  <Step title="Associate it" icon="link">
-    Associate the payment with the trip so balances and profit/loss update.
+  <Step title="Submit Payments">
+    Click **Submit** to add the payments. Revenue and expected profit update automatically to reflect received payments.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_97b2b51b-6db1-46f2-af8c-08f6cc465d44.gif" alt="Submit payments" />
+    </Frame>
   </Step>
 </Steps>
 
-## Payment routing
-
-Split payments across agencies and vendors, and handle transferring an issued ticket into the CRM after a Stripe or USAePay payment.
-
-## Audit trail
-
 <Callout kind="info">
-  Payment history gives you a full audit trail of all money movement, including manual transactions for offline payments and adjustments.
+  Payment history gives a full audit trail of all money movement, including payment routing across agencies and vendors.
 </Callout>
