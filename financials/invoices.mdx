@@ -1,41 +1,116 @@
 ---
 title: Invoices
-description: Create invoices from a trip or from scratch, send them with a payment link, and edit them even after full payment.
+description: Create invoices from a trip or from scratch, send them with a payment link, and manage or edit them - even after full payment.
 ---
 
-Yaalago's invoicing is integrated with trips and payments, so your billing and your bookings stay in sync.
+Yaalago's invoicing is integrated with trips and payments. Create an invoice from a trip, from scratch, or via the + icon; add custom line items; and send with a PDF and a payment link (Stripe or USAePay). You can edit invoices even after full payment - totals recalculate and associated trips and records stay in sync.
 
-## Create an invoice
+<iframe
+  src="https://play.gumlet.io/embed/6a5ebd9da151fd52184c4cab"
+  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
+  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  title="Video tutorial"
+></iframe>
 
-There are several ways to create one:
-
-- **From a trip** - auto-build an invoice from the trip record
-- **From scratch** - build a custom invoice with your own line items
-- **Via the + icon** - quick-create from anywhere
-
-You can also attach trips to new or existing invoices.
-
-## Send an invoice
+## Create and send an invoice
 
 <Steps>
-  <Step title="Review the invoice" icon="receipt">
-    Add custom line items and confirm pricing and markup.
+  <Step title="Create an invoice">
+    To stack several options onto one invoice for clients who pay later, either use the **plus icon** to create one directly, or open the trip and create an invoice from it.
   </Step>
-  <Step title="Send" icon="send">
-    Send with an optional message to one or more recipients, with a PDF download and a payment link (Stripe or USAePay).
+  <Step title="Add to a master invoice">
+    With the trip selected, go to the **Action** tab and add it to a new or existing master invoice.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_b4ba76e4-ef5e-44b0-82dc-f63fd377c590.gif" alt="Add to invoice" />
+    </Frame>
+  </Step>
+  <Step title="Select tickets">
+    Choose an existing or new invoice, then **Select All** tickets or pick them manually.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_9dfbe9f9-2942-4e68-aa78-4c00b8e142ac.gif" alt="Select tickets" />
+    </Frame>
+  </Step>
+  <Step title="Submit and select flights">
+    Submit the invoice, then make sure to select **flights** and submit.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_d6921e21-1b8e-42d8-a474-b47bca9b3248.gif" alt="Select flights" />
+    </Frame>
+  </Step>
+  <Step title="Enter invoice details">
+    Enter an invoice name and the client it is for, set the due date, group by booking or ticket, and add any notes.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_40e1f72c-2c9b-4c53-b625-690aaaf1bea7.gif" alt="Invoice details" />
+    </Frame>
+  </Step>
+  <Step title="Set payment options and save">
+    Select the payment options you want to accept, review, and **Save**.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_f92fa548-85a1-494d-86fd-4a56bf610766.gif" alt="Payment options" />
+    </Frame>
+  </Step>
+  <Step title="Share the invoice">
+    Once saved, share it by copying a link or sending it by email.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_1820d569-06ad-474c-a6e5-7aa4ecf71fb1.gif" alt="Share invoice" />
+    </Frame>
   </Step>
 </Steps>
 
-## Partial payments
+## Manage your invoices
 
-Track outstanding balances on partially paid trips and request additional funds. Add partially paid trips to an invoice to keep the balance accurate.
+<iframe
+  src="https://play.gumlet.io/embed/6a5ebda3a151fd52184c4d59"
+  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
+  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  title="Video tutorial"
+></iframe>
 
-## Edit after payment
+To view your invoices, go to the **Invoice** tab, where you'll find a list of all created invoices.
 
-<Callout kind="info">
-  You can edit invoices even after they are fully paid - Yaalago auto-recalculates totals and syncs the associated trips and records.
-</Callout>
+<Steps>
+  <Step title="Filter invoices">
+    Select the type of invoice you'd like to see, and filter by specific clients.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_65e2d2aa-35d0-45e4-9c92-5a18fc07cf12.gif" alt="Filter invoices" />
+    </Frame>
+  </Step>
+  <Step title="Edit an invoice">
+    Open a specific invoice to edit it. You can change the payment method and toggle whether remaining amounts are shown.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_6c055027-846a-4a1a-b379-c3bf0e11a98a.gif" alt="Edit invoice" />
+    </Frame>
+  </Step>
+  <Step title="Edit items and upsell">
+    Edit the flights and bookings on the invoice and add more via **Add Items**. You can upsell ticket amounts (for example +$50 across all tickets), then submit.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_74d63dc8-77da-46c5-a545-fd78b944f8ee.gif" alt="Upsell" />
+    </Frame>
+  </Step>
+  <Step title="Add a transaction">
+    Add a transaction to mark an invoice (or one of its items) as paid.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_d4a9cca7-f0fe-4dd9-9bce-d84055998145.gif" alt="Add transaction" />
+    </Frame>
+  </Step>
+  <Step title="Save changes">
+    Save your changes to update the invoice.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_1c6332c1-cee9-488d-a80f-9de130f00fd9.gif" alt="Save changes" />
+    </Frame>
+  </Step>
+</Steps>
 
 <Callout kind="tip">
-  When you update a trip's price, sync it with the associated invoice so both always match.
+  Track outstanding balances on partially paid trips and request additional funds when needed.
 </Callout>

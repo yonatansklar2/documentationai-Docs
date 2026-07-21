@@ -3,46 +3,123 @@ title: Importing Trips
 description: Bring trips into Yaalago from Sabre, Amadeus, a manual entry, or an AI confirmation import.
 ---
 
-A **trip** is the central record in Yaalago - it holds the itinerary, passengers, pricing, payments, and tasks. There are several ways to create one.
+A **trip** is the central record in Yaalago - it holds the itinerary, passengers, pricing, payments, and tasks. Import a full PNR from Sabre or Amadeus, add a booking to an existing trip, enter a trip manually, or use [AI confirmation import](/proposals/confirmation-import). Every imported trip automatically creates or merges the [client record](/clients/overview).
 
-## Ways to import
+<iframe
+  src="https://play.gumlet.io/embed/6a5ebd9ea151fd52184c4cf3"
+  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
+  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  title="Video tutorial"
+></iframe>
 
-<Tabs>
-  <Tab title="Sabre" icon="plane">
-    Display the full PNR in Sabre (using your PF key), copy it, then in Yaalago click **Add Trip** and paste. Yaalago extracts passengers, segments, and fares. The [Yaalago Porter](/gds/porter) extension can capture the PNR for you in one click.
-  </Tab>
-  <Tab title="Amadeus" icon="plane">
-    Copy the Amadeus PNR and paste it into **Add Trip**. Multi-segment itineraries and commission tracking are supported.
-  </Tab>
-  <Tab title="Manual" icon="edit">
-    Add any trip manually - useful for award trips, third-party bookings, or anything not in a GDS. You can mark a manual segment as **open** for reporting.
-  </Tab>
-  <Tab title="AI import" icon="sparkles">
-    Drop a confirmation PDF or email from any provider and let AI build the trip. See [Universal Confirmation Import](/proposals/confirmation-import).
-  </Tab>
-</Tabs>
+## Import a trip from the GDS
 
-## Award & third-party bookings
+<Steps>
+  <Step title="Show all PNR sections">
+    In your GDS, run the **show all** command to open every section of the PNR (works for both Sabre and Amadeus).
 
-Yaalago handles award trips and third-party bookings, including subagency bookings with split fees. When a subagency booking is submitted, three emails are auto-generated: a ticket confirmation, an agent commission note, and a trip confirmation.
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_747ba6ad-66ef-4270-8f8c-17c8fcdb5b15.gif" alt="Show all" />
+    </Frame>
+  </Step>
+  <Step title="Copy the PNR data">
+    Highlight and copy the full PNR to your clipboard.
 
-## Per-trip details
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_c899e046-14cb-4589-9572-dae29b25c465.gif" alt="Copy PNR" />
+    </Frame>
+  </Step>
+  <Step title="Paste into Add Trip">
+    In **Trips**, open the GDS add-trip function, paste the copied data, and convert it.
 
-- **Seats, meals, and baggage** per passenger per segment
-- **Trip allowances** for seating and baggage
-- **Payments** recorded on the Edit Trip page and associated automatically
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_68fe9c18-2136-4a0d-8bb7-f32b2f94366d.gif" alt="Add trip" />
+    </Frame>
+  </Step>
+  <Step title="Confirm flight and agent details">
+    Verify the flight dates, booking agent, sales agent, and agency, and assign the correct flights to the ticket numbers.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_23b47f97-002e-400d-9ba9-69f7830b8eac.gif" alt="Confirm details" />
+    </Frame>
+  </Step>
+  <Step title="Review accounting">
+    Check the accounting information and add any additional amounts as needed. The amounts shown are based on when tickets were paid for and do not include upsells.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_16178505-da29-44a3-a67d-bfc1f8a31be4.gif" alt="Accounting" />
+    </Frame>
+  </Step>
+  <Step title="Review commission and fees">
+    Review the commission splits and issuing fees set up by your agency, then click **Submit**.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_09e36173-fe5e-439a-8f2d-766d716d2472.gif" alt="Commission and fees" />
+    </Frame>
+  </Step>
+  <Step title="Update meals and seating">
+    Click **Mass Update Flight Options** to review and update meals and seating.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_78de20e7-f17a-433b-a394-249048790582.gif" alt="Meals and seating" />
+    </Frame>
+  </Step>
+  <Step title="Update and preview the PDF">
+    Once everything is correct, click **Update** - the PDF preview reflects your changes.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_a7b08070-7d76-4b12-8325-dd41d20377cf.gif" alt="PDF preview" />
+    </Frame>
+  </Step>
+  <Step title="Associate payments">
+    In trip details, scroll to **Payment History** and click **Add Transaction**. Associate a payment from an existing proposal or add a manual payment, then **Submit**. Revenue and expected profit adjust automatically.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_d0c97c2c-77fa-41c5-b1ec-a8d13e900c4b.gif" alt="Associate payments" />
+    </Frame>
+  </Step>
+</Steps>
+
+## Add a booking to an existing trip
+
+<iframe
+  src="https://play.gumlet.io/embed/6a5ebdb4e4e7b5ab4684ff36"
+  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
+  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  title="Video tutorial"
+></iframe>
+
+<Steps>
+  <Step title="Copy trip details from the GDS">
+    In the PNR, click **Show All** to expand every section, then highlight and copy the relevant text.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_d88332fa-e388-4be3-b284-8529143597c1.gif" alt="Copy details" />
+    </Frame>
+  </Step>
+  <Step title="Paste into a new trip">
+    Open a new trip in the CRM and paste the copied text.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_71a171d3-acdb-44f7-8631-7386296433cb.gif" alt="Paste details" />
+    </Frame>
+  </Step>
+  <Step title="Confirm flights and financials">
+    Verify the flights, booking agency, and sales agents; check that tickets are assigned to the correct flights and that all financials, including upsells, are accurate.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_924e8c82-3d99-4496-993e-37092e1207c5.gif" alt="Confirm financials" />
+    </Frame>
+  </Step>
+  <Step title="Add bookings to the existing trip">
+    After confirming commissions and fees, click **Add Bookings to Existing Trip** and select the trip from the drop-down. The booking is now merged into the existing CRM trip.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_b3056f48-5cc1-4536-84a5-50d5ca5fbbc2.gif" alt="Select existing trip" />
+    </Frame>
+  </Step>
+</Steps>
 
 <Callout kind="tip">
-  Every imported trip automatically creates or merges the [client record](/clients/overview) from the traveler details.
+  Award, third-party, and manual trips are all supported, including marking a manual segment as **open** for reporting.
 </Callout>
-
-## Next
-
-<Columns cols={2}>
-  <Card title="Merge & Change Monitoring" icon="bell" href="/trips/merge-monitoring">
-    Combine bookings and get alerts on schedule changes.
-  </Card>
-  <Card title="Exchanges, Voids & Cancellations" icon="repeat" href="/trips/exchanges-voids">
-    Handle changes to issued trips.
-  </Card>
-</Columns>
