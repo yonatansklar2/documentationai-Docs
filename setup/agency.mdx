@@ -3,7 +3,14 @@ title: Set Up Your Agency
 description: Configure your agency profile, logo, branding, and default GDS so every proposal, invoice, and confirmation is set up correctly.
 ---
 
-Setting up your agency profile is the first thing to do - it drives the branding on your proposals, invoices, confirmations, and reminder emails.
+Setting up your agency profile is the first thing to do - it drives the branding on your proposals, invoices, confirmations, and reminder emails, and the commission math on every booking. The onboarding video below walks through your first 30 minutes end to end.
+
+<iframe
+  src="https://play.gumlet.io/embed/6a5ebdaceda64ba028acc613"
+  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
+  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  title="Onboarding video"
+></iframe>
 
 ## Agency profile
 
@@ -24,20 +31,20 @@ Setting up your agency profile is the first thing to do - it drives the branding
 For a clean start, configure these in order - each one makes the next step more accurate:
 
 <Columns cols={2}>
-  <Card title="1. Users & Roles" icon="users" href="/setup/users-roles">
-    Add agents and assign Admin, Agent, or View Only permissions.
+  <Card title="1. Vendors & Commissions" icon="briefcase" href="/setup/vendors-commissions">
+    Add vendors (with PCCs, void rules, and time zones) and commission structures so reporting is accurate from the first trip.
   </Card>
-  <Card title="2. Vendors & Commissions" icon="briefcase" href="/setup/vendors-commissions">
-    Add vendors and commission structures so reporting is accurate.
+  <Card title="2. Users & Roles" icon="users" href="/setup/users-roles">
+    Add agents and assign Admin, Agent, or View Only permissions.
   </Card>
   <Card title="3. Payment Processors" icon="credit-card" href="/setup/payment-processors">
     Connect Stripe and/or USAePay to collect payments.
   </Card>
   <Card title="4. Templates & Terms" icon="mail" href="/setup/templates">
-    Customize email templates, prefilled text, and terms.
+    Customize email templates, trip defaults, and terms.
   </Card>
 </Columns>
 
 <Callout kind="tip">
-  Complete your vendor and commission setup before importing lots of trips - it means your profit/loss and commission numbers are right from the first booking.
+  Set up vendors and commission structures before importing lots of trips - it means your profit/loss and commission numbers are right from the first booking. While you're in Settings, you can also enable [Sabre Sync](/gds/sabre-sync) so bookings mirror in automatically.
 </Callout>

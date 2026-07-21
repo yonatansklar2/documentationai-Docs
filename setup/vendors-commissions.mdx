@@ -3,30 +3,94 @@ title: Vendors & Commission Structures
 description: Add the vendors you work with and define commission structures so profit, loss, and payouts are calculated automatically.
 ---
 
-Vendors and their commission structures are the backbone of accurate reporting in Yaalago. Once configured, every booking knows exactly how much commission the agency and agent should expect.
+Vendors and their commission structures are the backbone of accurate reporting. Once configured, every booking knows exactly how much commission the agency and agent should expect. Add your vendors first, then define a commission structure for each - the structure can only be built on top of vendors that already exist.
 
-## Add a vendor
+<iframe
+  src="https://play.gumlet.io/embed/6a5ebd98e4e7b5ab4684fd09"
+  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
+  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  title="Video tutorial"
+></iframe>
+
+## Add your vendors
 
 <Steps>
-  <Step title="Open vendor settings" icon="briefcase">
-    Go to **Settings > Vendors** and click **Add Vendor**.
+  <Step title="Navigate to Vendors">
+    In **Settings**, scroll down and click **Vendors**.
   </Step>
-  <Step title="Enter vendor details" icon="file-text">
-    Add the vendor name and any relevant details. Vendors can be airlines, consolidators, hotels, cruise lines, tour operators, and more.
+  <Step title="Add vendor information">
+    Fill in the details for your vendor: **Name**, **Email**, **PCC** (where trips will be booked), **Time Zone**, **Status**, and **Void Type**.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_732d98e3-84b8-44c2-9041-ff4156190edd.gif" alt="Vendor information" />
+    </Frame>
+  </Step>
+  <Step title="Review the vendor list">
+    Once saved, your vendor appears in the list below, where you can review or edit it at any time. It is strongly recommended to add all your vendors before anything else - for GDS bookings, Yaalago displays the PCC associated with the booking so it can apply the correct commission automatically.
   </Step>
 </Steps>
 
-## Commission structures
+## Create commission structures
+
+<iframe
+  src="https://play.gumlet.io/embed/6a5ebd9be4e7b5ab4684fd55"
+  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
+  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  title="Video tutorial"
+></iframe>
+
+Create a commission structure for each vendor so that when you import a booking from the GDS, the correct commission is applied automatically.
 
 <Steps>
-  <Step title="Create a structure" icon="percent">
-    For each vendor, define how commission is calculated - a percentage, a flat amount, or a more complex arrangement.
+  <Step title="Open Commission Structures">
+    Go to the **Commission Structures** section, just below Vendors, and start a new structure.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_947748f7-1907-456b-8a80-7d6fb3c0afa1.gif" alt="Commission structures" />
+    </Frame>
   </Step>
-  <Step title="Set agent splits" icon="users">
-    Define how commission is split between the agency and the agent so payouts are tracked automatically.
+  <Step title="Choose a structure type">
+    Fill in only the options relevant to that vendor:
+
+    - **Most common commission split** - the percentage of earnings an agent keeps after the vendor's share (e.g. a 70% split on $100 nets the agent $70).
+    - **Split of savings** - a percentage of the savings between the published fare and the private fare.
+    - **Office ticketing fee** - a fee the office charges for handling ticketing on the agent's behalf.
+    - **Straight split based on profit** - the agent receives a percentage of the profit (sale price minus all costs).
+    - **Commission split from vendor and split to subagent** - commission is split between vendor and agency first, then the agency splits its share with the subagent.
+    - **Self-issue ticketing fee** - a fee for finalizing ticketing after the agent has done the legwork.
+    - **Vendor fee** - a flat fee charged by the vendor, typically when no commission is earned.
+    - **Custom amount** - a flat rate the PCC pays an agent per ticket.
+  </Step>
+  <Step title="Clone an existing structure">
+    You can clone a commission structure from a vendor you've already set up.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_bde883e6-abed-4386-b8d1-f6704d3f813f.gif" alt="Clone structure" />
+    </Frame>
+  </Step>
+  <Step title="Specify agent and vendor">
+    Select which **agent** the structure applies to, and which **vendor** you are cloning from.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_61cc7520-e79e-403a-a43b-f0c21c5999de.gif" alt="Agent and vendor" />
+    </Frame>
+  </Step>
+  <Step title="Submit">
+    Once the structure fits your vendor, click **Submit**.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_98c3434e-40e9-4d4a-8f9c-bbb71ae631b7.gif" alt="Submit structure" />
+    </Frame>
+  </Step>
+  <Step title="Toggle Active / Inactive">
+    Return any time to edit the structure or switch it between **Active** and **Inactive**. Active structures apply automatically when bookings are imported.
+
+    <Frame>
+      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_a3791da3-908b-47c5-8133-7b1097483d5d.gif" alt="Active inactive" />
+    </Frame>
   </Step>
 </Steps>
 
 <Callout kind="tip">
-  Diverse commission structures per vendor are supported - set them up once and every future booking with that vendor inherits the math. This feeds directly into [Commission Tracking](/financials/commissions) and profit/loss per trip.
+  These structures feed [Commission Tracking](/financials/commissions) and profit/loss per trip - set them up before importing lots of trips.
 </Callout>
