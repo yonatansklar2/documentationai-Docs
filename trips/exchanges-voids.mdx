@@ -3,7 +3,7 @@ title: Exchanges, Voids & Cancellations
 description: Replace trips with updated GDS data, void a trip while keeping the fee, exchange trips and split PNRs, and cancel trips or segments.
 ---
 
-Trips change. Yaalago has dedicated flows for the common post-booking scenarios - replacing a trip with updated GDS data, fully exchanging a trip, exchanging a split PNR, and voiding a trip while keeping your fee.
+Trips change. Yaalago has dedicated flows for the common post-booking scenarios: replacing a trip with updated GDS data, fully exchanging a trip, exchanging a split PNR, and voiding a trip while keeping your fee.
 
 <Callout kind="warning">
   **Replace** and **Exchange** are not the same. Use **Replace** only to fully overwrite the previous trip data (keeping nothing). Use **Exchange** when you are reissuing and need to retain the previous ticket history. If there are two changes, split the PNR first - a full exchange first would overwrite data.
@@ -11,134 +11,104 @@ Trips change. Yaalago has dedicated flows for the common post-booking scenarios 
 
 ## Replace a trip
 
-<iframe
+<Video
   src="https://play.gumlet.io/embed/6a5ebdafa151fd52184c4e57"
-  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
-  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-  title="Video tutorial"
-></iframe>
+  title="Replace a trip - video tutorial"
+  width="960" height="480" allow-full-screen="true"
+  style="width: 100%; max-width: 960px; height: auto; border-radius: 12px;"
+/>
 
 <Steps>
   <Step title="Capture the updated PNR">
     Run the **show all** command in the GDS to capture the new data, and copy it to your clipboard.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_53db9066-5f59-4390-a75b-a4372fe0f5e7.gif" alt="Capture PNR" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_53db9066-5f59-4390-a75b-a4372fe0f5e7.gif" alt="Capture PNR" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
   <Step title="Add the trip in GDS Flight">
     In the **GDS Flight** section, add the trip as you would a regular booking and click **Convert**.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_f4a5f3ee-86f4-484e-a1ee-da0878d80a2f.gif" alt="Add trip" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_f4a5f3ee-86f4-484e-a1ee-da0878d80a2f.gif" alt="Add trip" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
   <Step title="Submit and confirm the replacement">
     Review the trip details - all financials, including the commission structure, should be unchanged. Click **Submit**, then click **Replace** when the CRM asks "Do you wish to replace trip?".
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_2b504240-a03a-4cb2-bb00-1a576e9803d4.gif" alt="Confirm replace" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_2b504240-a03a-4cb2-bb00-1a576e9803d4.gif" alt="Confirm replace" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
   <Step title="Update seats and meals">
     Update seat assignments and meal preferences as needed. Associated payments stay attached to the trip after replacement.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_4f259b11-f0d1-44cf-b8ae-34503e204a52.gif" alt="Seats and meals" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_4f259b11-f0d1-44cf-b8ae-34503e204a52.gif" alt="Seats and meals" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
 </Steps>
 
 ## Fully exchange a trip
 
-<iframe
+<Video
   src="https://play.gumlet.io/embed/6a5ebdb2a151fd52184c4e74"
-  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
-  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-  title="Video tutorial"
-></iframe>
+  title="Fully exchange a trip - video tutorial"
+  width="960" height="480" allow-full-screen="true"
+  style="width: 100%; max-width: 960px; height: auto; border-radius: 12px;"
+/>
 
 <Steps>
   <Step title="Copy the PNR and open a GDS trip">
     Use the **Show All** PF key in the GDS to open all sections and copy the information. In the CRM, open **GDS Trip** as if entering a new trip.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_1ac8918d-493a-4d6e-a786-79ccd51c1484.gif" alt="Open GDS trip" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_1ac8918d-493a-4d6e-a786-79ccd51c1484.gif" alt="Open GDS trip" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
   <Step title="Paste and start the exchange">
     Paste the information and click **Exchange**. A full exchange means all travelers on the reservation move to the new itinerary under the same trip and PNR. (Use **Exchange from Split PNR** instead if travelers have been split off.) Click **Fully Exchange** to begin.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_4775be7a-1124-4c3c-8f64-6bc3bdbe7d5a.gif" alt="Start exchange" />
-    </Frame>
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_aa3009f5-18c3-4661-b41d-3005855dd398.gif" alt="Fully exchange" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_4775be7a-1124-4c3c-8f64-6bc3bdbe7d5a.gif" alt="Start exchange" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
   <Step title="Confirm dates and compare trips">
     After confirming the dates, two columns appear: the left shows your old (saved) trip, the right shows the new trip. Compare them to make sure the right details are present.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_7f35c0e3-c82c-42a1-a71e-75574f578430.gif" alt="Compare trips" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_7f35c0e3-c82c-42a1-a71e-75574f578430.gif" alt="Compare trips" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
   <Step title="Select tickets and assign flights">
     Select the correct information (for example **Tickets for flight**) to mark previous tickets as exchanged and assign the correct flight segments to the new ticket numbers. If you use change-fee EMDs, be sure to select the flights on the correct ticket numbers.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_ca48527a-4bdb-483a-b959-4292f972f56b.gif" alt="Assign flights" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_ca48527a-4bdb-483a-b959-4292f972f56b.gif" alt="Assign flights" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
   <Step title="Review accounting, repeat splits, submit">
-    Review the accounting: the top entry is for previous tickets, the lower entries for new tickets. On involuntary exchanges where commission shows twice, adjust it manually to match the correct commissions. Repeat the splits as set by the original trip and click **Submit**, then open the trip to confirm everything is correct.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_4d5131f0-6641-4b8c-8161-c0c11763225d.gif" alt="Review and submit" />
-    </Frame>
+    Review the accounting: the top entry is for previous tickets, the lower entries for new tickets. On involuntary exchanges where commission shows twice, adjust it manually to match. Repeat the splits as set by the original trip, click **Submit**, then open the trip to confirm everything is correct.
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_4d5131f0-6641-4b8c-8161-c0c11763225d.gif" alt="Review and submit" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
 </Steps>
 
 ## Exchange a split PNR
 
-<iframe
+<Video
   src="https://play.gumlet.io/embed/6a5ebdb2e4e7b5ab4684ff0b"
-  style="width:100%; aspect-ratio:2/1; border:0; border-radius:12px; margin:0.75rem 0;"
-  loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-  title="Video tutorial"
-></iframe>
+  title="Exchange a split PNR - video tutorial"
+  width="960" height="480" allow-full-screen="true"
+  style="width: 100%; max-width: 960px; height: auto; border-radius: 12px;"
+/>
 
 Use **Exchange from Split PNR** when a PNR is divided and part of the exchange is not on the same record locator. For example, if three travelers were entered together and one now returns on a different date, this creates a PNR for that traveler on the new reservation while removing them from the original.
 
 <Steps>
   <Step title="Copy the PNR">
     Open and copy all the PNR information using the **PF** key in your GDS.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_e94bff99-39b0-4a83-954f-5156a8b8c6b2.gif" alt="Copy PNR" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_e94bff99-39b0-4a83-954f-5156a8b8c6b2.gif" alt="Copy PNR" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
   <Step title="Paste and initiate the split exchange">
     Paste the information into the flight section, then click **Change Exchange** and **Exchange from Split PNR**.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_65c48f88-71b4-45ed-ae19-f53e595192e7.gif" alt="Initiate split exchange" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_65c48f88-71b4-45ed-ae19-f53e595192e7.gif" alt="Initiate split exchange" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
   <Step title="Confirm the reference and details">
     The CRM reads the PNR notes to find the existing reference (in rare cases you may need to select it manually). Review the flight and ticket details and assign the flights to the correct tickets.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_cab0b6af-1af6-4531-aafa-6dfbca1cad21.gif" alt="Confirm details" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_cab0b6af-1af6-4531-aafa-6dfbca1cad21.gif" alt="Confirm details" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
   <Step title="Verify commission and submit">
     Check that all commission and split information is correct, then submit. The new PNR is saved with the split-off passengers, and the original trip keeps the original traveler on their original PNR. If that original traveler also changed, do a full exchange on them after the split.
-
-    <Frame>
-      <img src="https://kb-assets.31.97.159.229.sslip.io/snapshot_0fc17a5d-f619-4aa2-9bfb-1b377a91584f.gif" alt="Verify and submit" />
-    </Frame>
+    
+    <Image src="https://kb-assets.31.97.159.229.sslip.io/snapshot_0fc17a5d-f619-4aa2-9bfb-1b377a91584f.gif" alt="Verify and submit" width="1200" height="600" style="width: 100%; height: auto; border-radius: 8px;" />
   </Step>
 </Steps>
 
